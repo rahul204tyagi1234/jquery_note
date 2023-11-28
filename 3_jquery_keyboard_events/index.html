@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>Events</title>
+  </head>
+  <body>
+    <input type="text" id="first"  name="" />
+    <input type="text" id="second" name="" />
+    <input type="text" id="third" name="" />
+    <span id="focus">Hii</span>
+    <span id="blur">How are you</span>
+    <p>All the different visitors' actions that a web page can respond to are called events.
+
+        An event represents the precise moment when something happens.</p>
+
+
+    <script>
+      // it is the keypress event
+
+      $("#first").keypress(function () {
+        alert("This the keypress events");
+        console.log("This the keypress events");
+      });
+
+        // it is the keypress event
+
+      $("#second").keydown(function () {
+        alert("This the keydown events");
+        console.log("This the keydown events");
+      });
+
+        // it is the keypress event
+
+      $("#third").keyup(function () {
+        alert("This the keyup events");
+        console.log("This the keyup events");
+      });
+
+      // it is the hide event
+
+      $('span').hide();
+      $('input').focus(function(){
+        $('#focus').show().fadeOut(3000);
+      });
+
+      // it is the blur event
+
+
+      $('input').blur(function(){
+        $('#blur').show().fadeOut(3000);
+      });
+
+      $(document).ready(function(){
+        $('p').on({
+            mouseenter:function(){
+                $(this).css('backgroundColor','red');
+            },
+            mouseleave:function(){
+                $(this).css('backgroundColor','green');
+            },
+            click:function(){
+                alert('This is the multiple way')
+            }
+        })
+      })
+
+
+    </script>
+  </body>
+</html>

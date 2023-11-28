@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>Events</title>
+  </head>
+  <body>
+    <button id="first">click me</button><br />
+    <button id="second">click me</button><br />
+    <button id="third">click me</button><br />
+    <button id="fourth">click me</button><br />
+
+    <script>
+      // it is the click event
+
+      $(document).ready(function () {
+        $("#first").click(function () {
+          alert("My first jquery code");
+        });
+      });
+
+      // it is the dblclick event
+
+      $(document).ready(function () {
+        $("#second").dblclick(function () {
+          alert("My first jquery code");
+        });
+      });
+
+      // it is the mouseenter event
+
+      $(document).ready(function () {
+        $("#third").mouseenter(function () {
+          alert("My first jquery code");
+        });
+      });
+
+      // it is the mouseleave event
+
+      $(document).ready(function () {
+        $("#fourth").mouseleave(function () {
+          alert("My first jquery code");
+        });
+      });
+    </script>
+  </body>
+</html>
