@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AppendTo & PrependTo</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <style>
+      body {
+        font-family: arial;
+      }
+      #box {
+        padding: 10px;
+        margin: 1px solid #000;
+        background: pink;
+      }
+    
+    </style>
+  </head>
+  <body>
+    <h1>jquery AppendTo & PrependTo method </h1>
+    <div id="box">
+      <h2>Test box</h2>
+      <p>Lorem ipsun <span>doler sit atom</span></p>
+    </div>
+    <br/>
+    <button id="appendToBtn">AppendTo</button>
+    <button id="prependToBtn">PrependTo</button>
+   
+    <script>
+        $(document).ready(function(){
+            $('#appendToBtn').click(function(){
+                $("<h3> Append : Rahul tyagi </h3>").appendTo('#box')
+            })
+        });
+
+        $(document).ready(function(){
+            $('#prependToBtn').click(function(){
+                $("<h3> Prepend : Rahul tyagi </h3>").prependTo('#box')
+            })
+        });
+
+       
+    </script>
+  </body>
+</html>
