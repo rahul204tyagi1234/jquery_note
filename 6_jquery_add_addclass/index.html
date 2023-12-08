@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add css</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $('#1').click(function(){
+                ('#div1').addClass('addCssClass');
+            });
+        });
+    </script>
+
+</head>
+
+
+<body>
+    <style>
+        .addCssClass{
+            height:100px;
+            width:300px;
+            border:1px solid black;
+            background-color:green;
+        }
+
+    </style>
+    
+
+
+<div id="div1" >
+
+     My self introduction.
+    <p>Hiii , my name is rahul tyagi.</p>
+    <p>I am a student of B.C.A </p>
+    
+    </div>
+    <br>
+    
+    <button id="1">Add css</button>
+    
+</body>
+</html>

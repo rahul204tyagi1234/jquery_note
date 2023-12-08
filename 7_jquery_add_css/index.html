@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add class</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <style>
+      body {
+        font-family: arial;
+      }
+      #box {
+        padding: 10px;
+        margin: 1px solid #000;
+      }
+    
+    </style>
+  </head>
+  <body>
+    <h1>Hii you are fine</h1>
+    <div id="box">
+      <h2>Test box</h2>
+      <p>Lorem ipsun <span>doler sit atom</span></p>
+    </div>
+    <br />
+    <button id="addstylecss">Add class</button>
+   
+    <script>
+        $(document).ready(function(){
+            $('#addstylecss').click(function(){
+                $('#box').css({"background":"pink","color":"green","border":"5px dotted green"})
+            })
+        })
+    </script>
+  </body>
+</html>
