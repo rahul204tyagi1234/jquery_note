@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Position & Offset</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <style>
+      body {
+        font-family: arial;
+      }
+      h1{
+        font-size: 25px;
+      }
+      #box {
+        padding: 30px;
+        margin: 20px;
+        border: 1px solid #000;
+        background: lightgreen;
+        position: relative;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>jquery Position() & Offset() method </h1>
+    <div id="box">
+      <h2>Test box</h2>
+      <p>Lorem ipsun <span>doler sit atom , how are you and looking good </span></p>
+   
+    </div>
+    <br/>
+    <button id="positionBtn">Position</button>
+    <button id="offsetBtn">Offset</button>
+   
+    <script>
+        $(document).ready(function(){
+            $('#positionBtn').click(function(){
+                console.log($('#box h2').position());
+            })
+
+            $('#positionBtn').click(function(){$('#box h2').offset()
+                var x= $('#box h2').position()
+                console.log("Top : "+ x.top+ " "+"Left : "+x.left);
+            })
+
+            $('#offsetBtn').click(function(){
+                $('#box h2').offset({top:50,left:50}) // set the value of h2 
+                console.log($('#box h2').offset());
+            })
+
+            $('#offsetBtn').click(function(){
+                var x= $('#box h2').offset()
+                console.log("Top : "+ x.top+ " "+"Left : "+x.left);
+            })
+        });   
+    </script>
+  </body>
+</html>
