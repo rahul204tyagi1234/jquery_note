@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>After & Before</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <style>
+      body {
+        font-family: arial;
+      }
+      #box {
+        padding: 10px;
+        margin: 1px solid #000;
+      }
+      .boxbg{
+        background: pink;
+      }
+    
+    </style>
+  </head>
+  <body>
+    <h1>jquery After & Before method </h1>
+    <div id="box">
+      <h2>Test box</h2>
+      <p>Lorem ipsun <span>doler sit atom</span></p>
+    </div>
+    <br/>
+    <button id="afterBtn">After</button>
+    <button id="beforeBtn">Before</button>
+   
+    <script>
+        $(document).ready(function(){
+            $('#afterBtn').click(function(){
+                $('#box').after("<h3> After : Rahul tyagi </h3>")
+            })
+        });
+
+        $(document).ready(function(){
+            $('#beforeBtn').click(function(){
+                $('#box').before("<h3> Before : Rahul tyagi </h3>")
+            })
+        });
+
+       
+    </script>
+  </body>
+</html>
