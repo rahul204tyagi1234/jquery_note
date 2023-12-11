@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hide() & Show()</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <style>
+      body {
+        font-family: arial;
+      }
+      h1{
+        font-size: 25px;
+      }
+      #box {
+        padding: 30px;
+        margin: 20px;
+        border: 1px solid #000;
+        background: lightgreen;
+        position: relative;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>jquery Hide() & Show() method </h1>
+    <div id="box" class="test">
+      <h2>Test box</h2>
+      <p>Lorem ipsun <span>doler sit atom , how are you and looking good </span></p>
+   
+    </div>
+    <br/>
+    <button id="hideClass">Hide</button>
+    <button id="showClass">Show</button>
+    <button id="toggleClass">Toggle</button>
+   
+   
+    <script>
+        $(document).ready(function(){
+            $('#hideClass').click(function(){
+               $('#box').hide(4000,function(){
+                console.log("it is hidden");
+               });// try it 1000,fast,slow,
+            })
+
+            $('#showClass').click(function(){
+               $('#box').show("slow",function(){
+                console.log("it is show");
+               });// try it 1000,fast,slow,
+            })
+
+            $('#toggleClass').click(function(){
+               $('#box').toggle("slow",function(){
+                console.log("it is toggle");
+               });// try it 1000,fast,slow,
+            })
+        });   
+    </script>
+  </body>
+</html>
