@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WrapAll & WrapInner</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <style>
+      body {
+        font-family: arial;
+      }
+      #box {
+        padding: 10px;
+        margin: 1px solid #000;
+        background: pink;
+      }
+      #test{
+        background: rgb(159, 184, 159);
+        padding: 5px;
+      }
+      .red{color: red;}
+   
+    
+    </style>
+  </head>
+  <body>
+    <h1>jquery WrapAll() & WrapInner() method </h1>
+    <!-- <div id="box"> -->
+      <h2>Test box</h2>
+      <p>Lorem ipsun <span>doler sit atom</span></p>
+      <p>Lorem ipsun <span>doler sit atom</span></p>
+    <!-- </div> -->
+    <br/>
+    <button id="wrapAllBtn">WrapAll</button>
+    <button id="WrapInnerBtn">WrapInner</button>
+   
+    <script>
+        $(document).ready(function(){
+            $('#wrapAllBtn').click(function(){
+                $('p').wrapAll('<div id="test"></div>')
+            })
+
+            $('#WrapInnerBtn').click(function(){
+                $('h1').wrapInner('<span class="red"></span>')
+            })
+
+          
+        });   
+    </script>
+  </body>
+</html>
