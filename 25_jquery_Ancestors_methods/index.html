@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <style>
+      body {
+        font-family: arial;
+      }
+      h1{
+        font-size: 25px;
+      }
+      #main-outer {
+        padding: 30px;
+        margin: 20px;
+        border: 1px solid #000;
+        background: lightgreen;
+        position: relative;
+     
+      }
+      #outer {
+        padding: 30px;
+        margin: 20px;
+        border: 1px solid #000;
+        background: rgb(225, 187, 225);
+        position: relative;
+     
+      }
+      #inner {
+        padding: 30px;
+        margin: 20px;
+        border: 1px solid #000;
+        background: rgb(219, 144, 169);
+        position: relative;
+     
+      }
+      /* #child-head {
+        padding: 30px;
+        margin: 20px;
+        border: 1px solid #000;
+        background: rgb(238, 144, 177);
+        position: relative;
+     
+      } */
+    </style>
+</head>
+<body>
+    <h1>jQuery Ancestor methods</h1>
+    <div id="main-outer">
+        <h2>Main Outer</h2>
+        <div id="outer">
+            <h2>Outer</h2>
+            <div id="inner">
+                <h2 id="child-head">Inner</h2>
+                <div>A</div>
+                <div>B</div>
+                <div id="child-C">C</div>
+                <div>D</div>
+            </div>
+        </div>
+    </div>
+    <script>
+        // it is parent method for apply the css
+
+        $(document).ready(function(){
+            $('#inner').parent().css('background','red')
+        }) 
+
+         // it is parents method for apply the css
+
+        $(document).ready(function(){
+            $('#inner').parents('#main-outer').css('background','red')
+        }) 
+
+         // it is parentsUntil method for apply the css
+
+        $(document).ready(function(){
+            $('#inner').parentsUntil('#main-outer').css('background','red')
+        }) 
+
+         // it is offsetParent method for apply the css
+
+        $(document).ready(function(){
+            $('#inner').offsetParent().css('background','red')
+        }) 
+         // it is parent closest for apply the css
+     
+        $(document).ready(function(){
+            $('#inner').closest('div').css('background','red')
+        }) 
+    </script>
+    
+</body>
+</html>

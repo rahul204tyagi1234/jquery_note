@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <style>
+      body {
+        font-family: arial;
+      }
+      h1 {
+        font-size: 25px;
+      }
+      #first {
+        padding: 30px;
+        margin: 20px;
+        border: 1px solid #000;
+        background: lightgreen;
+        position: relative;
+      }
+      #second {
+        padding: 30px;
+        margin: 20px;
+        border: 1px solid #000;
+        background: rgb(225, 187, 225);
+        position: relative;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>jQuery Filtering methods</h1>
+    <div id="first">
+      <p>
+        A paragraph is a series of sentences
+        <b
+          >that are organized and coherent, and are all related to a single
+          topic.</b
+        >
+        Almost every piece of writing you do that is longer than a few sentences
+        should be organized into paragraphs.
+      </p>
+      <p>
+        A paragraph is a series of sentences that are organized and coherent,
+      </p>
+    </div>
+    <ul>
+      <li>Apple</li>
+      <li><span>Orange</span></li>
+      <li>Papaya</li>
+      <li>Apple</li>
+    </ul>
+    <p class="test">
+      A paragraph is a series of sentences that are organized and coherent, and
+      are all related to a single topic. Almost every piece of writing you do
+      that is longer than a few sentences should be organized into paragraphs.
+    </p>
+    <p>
+      A paragraph is a series of sentences
+      <span class="test">that are organized</span> and coherent,
+    </p>
+    <script>
+      $(document).ready(function(){
+          $('p').has('span,b').css('background','red')
+      })
+
+      $(document).ready(function () {
+        $("p").click(function () {
+          if ($(this).parent().is("div")) {
+            $(this).css('background','blue')
+          
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
