@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stop</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <style>
+      body {
+        font-family: arial;
+      }
+      h1{
+        font-size: 25px;
+      }
+      #box {
+        padding: 30px;
+        margin: 20px;
+        width: 100px;
+        border: 1px solid #000;
+        background: lightgreen;
+        position: relative;
+     
+      }
+    </style>
+  </head>
+  <body>
+    <h1>jquery Stop method </h1>
+    <div id="box">
+      Rahul Tyagi   
+    </div>
+    <br/>
+    <button id="animateBtn">Animate</button>
+    <button id="stopBtn">Stop</button>
+      
+    <script>
+        $(document).ready(function(){
+            $('#animateBtn').click(function(){
+              $('#box').animate({left:"500px"},3000)
+              $('#box').animate({fontSize:"25px"},2000)
+            })
+
+            $('#stopBtn').click(function(){
+                $('#box').stop(true,true);
+            })
+
+        });   
+    </script>
+  </body>
+</html>
