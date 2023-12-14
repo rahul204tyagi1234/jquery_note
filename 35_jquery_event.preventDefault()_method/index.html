@@ -26,20 +26,17 @@
   <body>
     <h1>jQuery Event.target Property</h1>
     <div id="first">
-        <h2>Text box</h2>
-        <p>A paragraph is a series of sentences that are organized and coherent, and are all related to a single topic.
-             Almost every piece of writing you do that is longer than a few sentences
-              should be organized into paragraphs.</p>
-              <button>Text button</button></button>
-
-    </div>
+    <a href="https://in.search.yahoo.com/yhs/search?hspart=bc&hsimp=yhs-fresh&type=jj5apac&p=paragraph" id="result">Rahul Tyagi (event.preventDefualt)</a>
+    <br><br><br><br>
+    <a href="https://in.search.yahoo.com/yhs/search?hspart=bc&hsimp=yhs-fresh&type=jj5apac&p=paragraph">Rahul Tyagi</a>
     <h3></h3>
     <script>
       $(document).ready(function(){
-        $('#first').on("click",function(){
-            $('h3').html("Target Element :"+" "+ event.target)
-            $('h3').html("Target Element :"+" "+ event.target.nodeName)
-            $('h3').html("Target Element :"+" "+ event.target.innerHTML)
+        $('#result').click(function(event){
+            event.preventDefault();
+
+            var r = event.isDefaultPrevented();
+            $('h3').html(r);
         })
       });
     </script>
