@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <style>
+      body {
+        font-family: arial;
+      }
+      h1 {
+        font-size: 25px;
+      }
+      #first {
+        padding: 30px;
+        margin: 20px;
+        border: 1px solid #000;
+        background: lightgreen;
+        position: relative;
+      }
+    
+    </style>
+  </head>
+  <body>
+    <h1>jQuery Event.target Property</h1>
+    <div id="first">
+        <h2>Text box</h2>
+        <p>A paragraph is a series of sentences that are organized and coherent, and are all related to a single topic.
+             Almost every piece of writing you do that is longer than a few sentences
+              should be organized into paragraphs.</p>
+              <button>Text button</button></button>
+
+    </div>
+    <h3></h3>
+    <script>
+      $(document).ready(function(){
+        $('#first').on("click",function(){
+            $('h3').html("Target Element :"+" "+ event.target)
+            $('h3').html("Target Element :"+" "+ event.target.nodeName)
+            $('h3').html("Target Element :"+" "+ event.target.innerHTML)
+        })
+      });
+    </script>
+  </body>
+</html>

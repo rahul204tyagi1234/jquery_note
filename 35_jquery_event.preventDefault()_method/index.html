@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <style>
+      body {
+        font-family: arial;
+      }
+      h1 {
+        font-size: 25px;
+      }
+      #first {
+        padding: 30px;
+        margin: 20px;
+        border: 1px solid #000;
+        background: lightgreen;
+        position: relative;
+      }
+    
+    </style>
+  </head>
+  <body>
+    <h1>jQuery Event.target Property</h1>
+    <div id="first">
+    <a href="https://in.search.yahoo.com/yhs/search?hspart=bc&hsimp=yhs-fresh&type=jj5apac&p=paragraph" id="result">Rahul Tyagi (event.preventDefualt)</a>
+    <br><br><br><br>
+    <a href="https://in.search.yahoo.com/yhs/search?hspart=bc&hsimp=yhs-fresh&type=jj5apac&p=paragraph">Rahul Tyagi</a>
+    <h3></h3>
+    <script>
+      $(document).ready(function(){
+        $('#result').click(function(event){
+            event.preventDefault();
+
+            var r = event.isDefaultPrevented();
+            $('h3').html(r);
+        })
+      });
+    </script>
+  </body>
+</html>
